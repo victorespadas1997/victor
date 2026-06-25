@@ -141,10 +141,19 @@
             padding: 25px;
             border-radius: 12px;
             border: 1px solid #334155;
+            overflow: hidden;
         }
 
         .tarjeta-error { border-left: 4px solid var(--error); }
         .tarjeta-exito { border-left: 4px solid var(--exito); }
+
+        .tarjeta-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
 
         /* PASOS */
         .paso { position: relative; text-align: center; }
@@ -384,22 +393,27 @@
             <h2 class="titulo-seccion">Nuestros <span>Servicios</span></h2>
             <div class="grid-problemas">
                 <div class="tarjeta">
+                    <img src="https://images.unsplash.com/photo-1512941691920-25bda36dc643?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Gestión de Redes Sociales" class="tarjeta-img">
                     <h3>Gestión de Redes</h3>
                     <p style="color:var(--gris); font-size:0.9rem; margin-top:10px;">Instagram, TikTok, Facebook y YouTube Shorts optimizados.</p>
                 </div>
                 <div class="tarjeta">
+                    <img src="https://images.unsplash.com/photo-1611532736000-2fa8d0ac76a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Producción Audiovisual" class="tarjeta-img">
                     <h3>Producción Audiovisual</h3>
                     <p style="color:var(--gris); font-size:0.9rem; margin-top:10px;">Vídeos corporativos, Reels dinámicos, anuncios y entrevistas.</p>
                 </div>
                 <div class="tarjeta">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178f50002c4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Cobertura de Eventos" class="tarjeta-img">
                     <h3>Eventos</h3>
                     <p style="color:var(--gris); font-size:0.9rem; margin-top:10px;">Cobertura para bodas, eventos culturales, empresas y ayuntamientos.</p>
                 </div>
                 <div class="tarjeta">
+                    <img src="https://images.unsplash.com/photo-1579829366248-204fe8413f31?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Grabación con Drone" class="tarjeta-img">
                     <h3>Grabación con Drone</h3>
                     <p style="color:var(--gris); font-size:0.9rem; margin-top:10px;">Vídeos aéreos profesionales para inmobiliarias, turismo y negocios locales.</p>
                 </div>
                 <div class="tarjeta" style="border: 1px solid var(--accent);">
+                    <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Coaching Digital" class="tarjeta-img">
                     <h3>Coaching Digital</h3>
                     <p style="color:var(--gris); font-size:0.9rem; margin-top:10px;">Mentoría personalizada de 1 hora por videollamada para aprender a potenciar tu negocio tú mismo.</p>
                 </div>
