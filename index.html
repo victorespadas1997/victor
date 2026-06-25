@@ -1,5 +1,3 @@
-# victor
-Marketing Digital
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -117,6 +115,9 @@ Marketing Digital
             text-decoration: none;
             font-weight: bold;
             transition: transform 0.2s, background 0.3s;
+            cursor: pointer;
+            border: none;
+            text-align: center;
         }
 
         .btn:hover { transform: translateY(-2px); }
@@ -167,14 +168,14 @@ Marketing Digital
         /* PRECIOS */
         .grid-precios {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 30px;
             align-items: start;
         }
 
         .tarjeta-precio {
             background-color: var(--bg-secundario);
-            padding: 40px 30px;
+            padding: 40px 25px;
             border-radius: 16px;
             text-align: center;
             border: 1px solid #334155;
@@ -206,18 +207,46 @@ Marketing Digital
         .lista-caracteristicas li { margin-bottom: 12px; color: var(--gris); }
         .lista-caracteristicas li::before { content: "✔  "; color: var(--accent); }
 
-        /* PORTFOLIO & TESTIMONIOS */
-        .placeholder-portfolio {
-            background: #1e293b;
-            height: 250px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        /* SECCIÓN DESCUENTO */
+        .contenedor-descuento {
+            background-color: var(--bg-secundario);
+            border: 1px solid #334155;
+            padding: 20px;
             border-radius: 12px;
-            border: 2px dashed #334155;
-            color: var(--gris);
+            max-width: 500px;
+            margin: 40px auto 0;
+            text-align: center;
         }
 
+        .contenedor-descuento input {
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #334155;
+            background-color: var(--bg-principal);
+            color: var(--claro);
+            font-size: 1rem;
+            width: 60%;
+            margin-right: 10px;
+            text-transform: uppercase;
+        }
+
+        .contenedor-descuento button {
+            padding: 10px 20px;
+            background-color: var(--accent);
+            color: var(--bg-principal);
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .msg-descuento {
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+
+        /* TESTIMONIOS */
         .testimonio {
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
             padding: 40px;
@@ -258,6 +287,7 @@ Marketing Digital
             .hero h1 { font-size: 2rem; }
             .menu { display: none; }
             .tarjeta-precio.destacado { transform: none; }
+            .contenedor-descuento input { width: 100%; margin-right: 0; margin-bottom: 10px; }
         }
     </style>
 </head>
@@ -278,18 +308,16 @@ Marketing Digital
 
     <main class="contenedor">
         
-        <!-- HERO -->
         <section class="hero">
             <h1>Tu negocio necesita clientes.<br>Nosotros nos encargamos de que te encuentren.</h1>
-            <p>Producción audiovisual, redes sociales y marketing digital para empresas de Asturias.</p>
-            <div class="ubicacion">📍 Mieres - Asturias</div>
+            <p>Producción audiovisual, redes sociales y marketing digital.</p>
+            <div class="ubicacion">📍 Zona de trabajo: Toda Asturias (Residencia en Mieres) | Disponibilidad internacional con gastos cubiertos</div>
             <div class="botones">
                 <a href="#contacto" class="btn btn-primary">Solicitar Auditoría Gratuita</a>
-                <a href="https://wa.me/TU_NUMERO" class="btn btn-whatsapp" target="_blank">WhatsApp</a>
+                <a href="https://wa.me/34664739159?text=Hola%20Víctor,%20quiero%20solicitar%20una%20auditoría%20gratuita." class="btn btn-whatsapp" target="_blank">WhatsApp</a>
             </div>
         </section>
 
-        <!-- PUNTOS DE DOLOR -->
         <section>
             <h2 class="titulo-seccion">¿Te suena alguna de estas <span>situaciones</span>?</h2>
             <div class="grid-problemas">
@@ -300,7 +328,6 @@ Marketing Digital
             </div>
         </section>
 
-        <!-- SOLUCIÓN -->
         <section id="solucion">
             <h2 class="titulo-seccion">La <span>Solución</span></h2>
             <p style="text-align: center; max-width: 700px; margin: -20px auto 40px; color: var(--gris);">
@@ -316,7 +343,6 @@ Marketing Digital
             </div>
         </section>
 
-        <!-- CÓMO TRABAJAMOS -->
         <section>
             <h2 class="titulo-seccion">Cómo <span>Trabajamos</span></h2>
             <div class="grid-pasos">
@@ -343,11 +369,10 @@ Marketing Digital
             </div>
         </section>
 
-        <!-- SOBRE MÍ -->
         <section id="sobre-mi">
             <h2 class="titulo-seccion">Mi <span>Historia</span></h2>
             <div class="sobre-mi-contenido">
-                <p>Me llamo <strong>[Tu Nombre]</strong>.</p>
+                <p>Me llamo <strong>Víctor Espadas</strong>.</p>
                 <p>Durante años trabajé jornadas largas en hostelería. Sabía perfectamente lo que era esforzarse muchas horas para que el negocio de otra persona creciera.</p>
                 <p>Después de pasar por diferentes sectores decidí apostar por algo que realmente me apasiona y que hoy en día mueve el mundo: <strong>la creación de contenido y el marketing digital</strong>.</p>
                 <p>Me mudé a Asturias buscando una mejor calidad de vida para mi familia y hoy estoy construyendo RYOKO Studio Media para ayudar a negocios locales a crecer en internet.</p>
@@ -355,7 +380,6 @@ Marketing Digital
             </div>
         </section>
 
-        <!-- SERVICIOS -->
         <section id="servicios">
             <h2 class="titulo-seccion">Nuestros <span>Servicios</span></h2>
             <div class="grid-problemas">
@@ -375,16 +399,19 @@ Marketing Digital
                     <h3>Grabación con Drone</h3>
                     <p style="color:var(--gris); font-size:0.9rem; margin-top:10px;">Vídeos aéreos profesionales para inmobiliarias, turismo y negocios locales.</p>
                 </div>
+                <div class="tarjeta" style="border: 1px solid var(--accent);">
+                    <h3>Coaching Digital</h3>
+                    <p style="color:var(--gris); font-size:0.9rem; margin-top:10px;">Mentoría personalizada de 1 hora por videollamada para aprender a potenciar tu negocio tú mismo.</p>
+                </div>
             </div>
         </section>
 
-        <!-- PRECIOS -->
         <section id="precios">
             <h2 class="titulo-seccion">Planes a tu <span>Medida</span></h2>
             <div class="grid-precios">
                 <div class="tarjeta-precio">
                     <h3>ESENCIAL</h3>
-                    <div class="precio">250€<span>/mes</span></div>
+                    <div class="precio" id="p-esencial">250€<span>/mes</span></div>
                     <p style="color: var(--gris); margin-bottom: 20px;">Ideal para pequeños negocios que empiezan.</p>
                     <ul class="lista-caracteristicas">
                         <li>Grabación mensual</li>
@@ -392,13 +419,13 @@ Marketing Digital
                         <li>Reels incluidos</li>
                         <li>Gestión básica</li>
                     </ul>
-                    <a href="https://wa.me/TU_NUMERO?text=Hola!%20Quiero%20información%20sobre%20el%20Plan%20Esencial" class="btn btn-primary" style="width: 100%;">Contratar</a>
+                    <a id="btn-esencial" href="https://wa.me/34664739159?text=Hola%20Víctor,%20quiero%20contratar%20el%20Plan%20Esencial%20(250€/mes)" class="btn btn-primary" style="width: 100%;">Contratar</a>
                 </div>
 
                 <div class="tarjeta-precio destacado">
                     <div class="etiqueta-destacado">MÁS CONTRATADO</div>
                     <h3>CRECIMIENTO</h3>
-                    <div class="precio">450€<span>/mes</span></div>
+                    <div class="precio" id="p-crecimiento">450€<span>/mes</span></div>
                     <p style="color: var(--gris); margin-bottom: 20px;">Para acelerar tu presencia y captar clientes.</p>
                     <ul class="lista-caracteristicas">
                         <li>Grabación mensual completa</li>
@@ -406,12 +433,12 @@ Marketing Digital
                         <li>Gestión diaria</li>
                         <li>Estrategia a medida</li>
                     </ul>
-                    <a href="https://wa.me/TU_NUMERO?text=Hola!%20Quiero%20información%20sobre%20el%20Plan%20Crecimiento" class="btn btn-primary" style="width: 100%; background: var(--accent);">Contratar</a>
+                    <a id="btn-crecimiento" href="https://wa.me/34664739159?text=Hola%20Víctor,%20quiero%20contratar%20el%20Plan%20Crecimiento%20(450€/mes)" class="btn btn-primary" style="width: 100%; background: var(--accent);">Contratar</a>
                 </div>
 
                 <div class="tarjeta-precio">
                     <h3>VIP</h3>
-                    <div class="precio">750€<span>/mes</span></div>
+                    <div class="precio" id="p-vip">750€<span>/mes</span></div>
                     <p style="color: var(--gris); margin-bottom: 20px;">Tu propio departamento de marketing externo.</p>
                     <ul class="lista-caracteristicas">
                         <li>Atención prioritaria</li>
@@ -419,46 +446,92 @@ Marketing Digital
                         <li>Producción avanzada</li>
                         <li>Gestión integral total</li>
                     </ul>
-                    <a href="https://wa.me/TU_NUMERO?text=Hola!%20Quiero%20información%20sobre%20el%20Plan%20VIP" class="btn btn-primary" style="width: 100%;">Solicitar llamada</a>
+                    <a id="btn-vip" href="https://wa.me/34664739159?text=Hola%20Víctor,%20quiero%20solicitar%20información%20sobre%20el%20Plan%20VIP%20(750€/mes)" class="btn btn-primary" style="width: 100%;">Solicitar llamada</a>
+                </div>
+
+                <div class="tarjeta-precio" style="border-color: #a855f7;">
+                    <h3>COACHING DIGITAL</h3>
+                    <div class="precio" id="p-coaching">50€<span>/sesión</span></div>
+                    <p style="color: var(--gris); margin-bottom: 20px;">Sesión online individualizada de 1 hora.</p>
+                    <ul class="lista-caracteristicas">
+                        <li>Videollamada directa</li>
+                        <li>1 Hora de consultoría</li>
+                        <li>Resolución de dudas</li>
+                        <li>Pautas de estrategia</li>
+                    </ul>
+                    <a id="btn-coaching" href="https://wa.me/34664739159?text=Hola%20Víctor,%20quiero%20reservar%20una%20sesión%20de%20Coaching%20Digital%20(50€)" class="btn btn-primary" style="width: 100%; background: #a855f7; color: white;">Reservar Sesión</a>
                 </div>
             </div>
-        </section>
 
-        <!-- PORTFOLIO -->
-        <section>
-            <h2 class="titulo-seccion">Nuestro <span>Trabajo</span></h2>
-            <div class="placeholder-portfolio">
-                📷 Espacio reservado para tus vídeos, reels y fotografías de proyectos.
+            <div class="contenedor-descuento">
+                <label for="input-codigo" style="display:block; margin-bottom: 10px; font-weight: bold;">¿Tienes un código de descuento?</label>
+                <input type="text" id="input-codigo" placeholder="Introduce tu código aquí">
+                <button onclick="aplicarDescuento()">Aplicar</button>
+                <div id="msg-descuento" class="msg-descuento"></div>
             </div>
         </section>
 
-        <!-- TESTIMONIOS -->
         <section>
             <h2 class="titulo-seccion">Lo que dicen los <span>Clientes</span></h2>
             <div class="testimonio">
-                <div class="estrellas">⭐⭐⭐⭐⭐</div>
+                <div class="estrellas">⭐⭐⭐⭐Sample ⭐</div>
                 <p style="font-style: italic; font-size: 1.2rem; margin-bottom: 15px;">“En dos meses hemos recibido más consultas que en todo el año pasado.”</p>
                 <span style="color: var(--accent); font-weight: bold;">- Cliente Satisfecho</span>
             </div>
         </section>
 
-        <!-- CONTACTO -->
         <section id="contacto">
             <h2 class="titulo-seccion">¿Hablamos? <span>Contacto</span></h2>
             <div class="contacto-info">
-                <p>📍 Mieres - Asturias</p>
+                <p style="font-size: 1.3rem; margin-bottom: 15px;"><strong>Víctor Espadas</strong></p>
+                <p>📍 Zona Mieres y toda Asturias. Movilidad internacional disponible.</p>
                 <a href="mailto:victorespadas1997@gmail.com">✉ victorespadas1997@gmail.com</a>
                 <a href="tel:+34664739159">📞 +34 664 739 159</a>
-                <p style="margin-top: 30px; color: var(--gris);">Aquí puedes integrar tu mapa de Google Maps fácilmente.</p>
             </div>
         </section>
 
     </main>
 
-    <!-- BOTÓN FLOTANTE WHATSAPP -->
-    <a href="https://wa.me/+34664739159?text=Hola,%20quiero%20información%20sobre%20los%20packs." class="wsp-flotante" target="_blank">
+    <a id="btn-flotante" href="https://wa.me/34664739159?text=Hola%20Víctor,%20quiero%20información%20sobre%20los%20packs." class="wsp-flotante" target="_blank">
         📱 WhatsApp | Info Packs
     </a>
 
+    <script>
+        let descuentoAplicado = false;
+
+        function aplicarDescuento() {
+            const codigo = document.getElementById('input-codigo').value.trim().toLowerCase();
+            const mensaje = document.getElementById('msg-descuento');
+            
+            if (descuentoAplicado) {
+                mensaje.style.color = "var(--accent)";
+                mensaje.innerText = "¡El código ya ha sido aplicado con éxito!";
+                return;
+            }
+
+            if (codigo === "victor10") {
+                descuentoAplicado = true;
+                
+                // Actualizar Textos de Precios
+                document.getElementById('p-esencial').innerHTML = "225€<span>/mes</span> <small style='color:var(--exito); font-size:0.8rem; display:block;'>(-10% aplicado)</small>";
+                document.getElementById('p-crecimiento').innerHTML = "405€<span>/mes</span> <small style='color:var(--exito); font-size:0.8rem; display:block;'>(-10% aplicado)</small>";
+                document.getElementById('p-vip').innerHTML = "675€<span>/mes</span> <small style='color:var(--exito); font-size:0.8rem; display:block;'>(-10% aplicado)</small>";
+                document.getElementById('p-coaching').innerHTML = "45€<span>/sesión</span> <small style='color:var(--exito); font-size:0.8rem; display:block;'>(-10% aplicado)</small>";
+
+                // Actualizar Enlaces de WhatsApp con el precio rebajado
+                document.getElementById('btn-esencial').href = "https://wa.me/34664739159?text=Hola%20Víctor,%20quiero%20contratar%20el%20Plan%20Esencial%20con%20el%20código%20VICTOR10%20(Precio%20final:%20225€/mes)";
+                document.getElementById('btn-crecimiento').href = "https://wa.me/34664739159?text=Hola%20Víctor,%20quiero%20contratar%20el%20Plan%20Crecimiento%20con%20el%20código%20VICTOR10%20(Precio%20final:%20405€/mes)";
+                document.getElementById('btn-vip').href = "https://wa.me/34664739159?text=Hola%20Víctor,%20quiero%20más%20información%20del%20Plan%20VIP%20con%20el%20código%20VICTOR10%20(Precio%20final:%20675€/mes)";
+                document.getElementById('btn-coaching').href = "https://wa.me/34664739159?text=Hola%20Víctor,%20quiero%20reservar%20Coaching%20Digital%20con%20el%20código%20VICTOR10%20(Precio%20final:%2045€)";
+                document.getElementById('btn-flotante').href = "https://wa.me/34664739159?text=Hola%20Víctor,%20tengo%20el%20código%20descuento%20VICTOR10%20y%20quiero%20información.";
+
+                mensaje.style.color = "var(--exito)";
+                mensaje.innerText = "¡Código VICTOR10 aplicado! Se ha descontado un 10% en todos los precios.";
+            } else {
+                mensaje.style.color = "var(--error)";
+                mensaje.innerText = "Código incorrecto. Inténtalo de nuevo.";
+            }
+        }
+    </script>
 </body>
 </html>
